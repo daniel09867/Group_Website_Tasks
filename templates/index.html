@@ -18,18 +18,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td contenteditable="true">...</td>
-                    <td contenteditable="true">...</td>
-                    <td contenteditable="true">...</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td contenteditable="true"></td>
-                    <td contenteditable="true"></td>
-                    <td contenteditable="true"></td>
-                </tr>
+            {% for task in tasks %}
+            <tr>
+                 <td>{{ loop.index }}</td>
+                 <td contenteditable="true">{{ task[0] }}</td>
+                 <td contenteditable="true">{{ task[1] }}</td>
+                 <td contenteditable="true">{{ task[2] }}</td>
+            </tr>
+            {% endfor %}
             </tbody>
         </table>
 
